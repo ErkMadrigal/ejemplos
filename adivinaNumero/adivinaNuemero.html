@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <main class="">
+        <div class="row m-5 p-5">
+          <div class="col-12">
+            <h1>juego adivinanza numerica</h1>
+          </div>
+          <div class="col-12">
+            <p>hemos seleccionado un numero aleatorio del 1 - 100. 
+              Veamos si puedes adivinar el nuemro en 10 intento. <br>
+              Le dimeros su posicion fue demaciada alta o demacida pequeña</p>
+          </div>
+          <div class="col-12">
+            <div class="form mt-5">
+                <label for="guessFlied">Ingresa una aproximacion:</label><input type="text" id="guessField" class="ml-2 guessField">
+                <button type="submit" class="guessSubmit button btn-primary">enviar</button>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="resulParas">
+                <p class="guesses"></p>
+                <p class="lastResult"></p>
+                <p class="lowOrHi"></p>
+            </div>
+          </div>
+        </div>  
+      </main>
+    <script src="AdivinaNumero.js"></script>
+  </body>
+</html>

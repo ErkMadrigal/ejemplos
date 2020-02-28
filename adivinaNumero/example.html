@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <title>example</title>
+  </head>
+  <style>
+      div{
+          font-size: 30px;
+          padding: px;
+          font-weight: bold;
+          width: 200px;
+          border-radius: 5px;
+      }
+      p{
+          height: 100px;
+          border: 1px solid red;
+      }
+      p::before{
+          content: 'hacer scroll';
+      }
+  </style>
+  <body>
+    <main>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <div id="pp" class="bg-primary">hola mundo</div>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </main>
+    <script>
+        let con=console.log
+    window.onscroll=()=>{
+        let div=document.getElementById('pp')
+        let yPos=div.getBoundingClientRect().top
+        if(Math.abs(yPos)<20){
+            div.style.filter='blur(3px)'
+        }else{
+            div.style.filter='blur(0px)'
+        }
+    }
+        
+    </script>
+  </body>
+</html>

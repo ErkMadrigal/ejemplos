@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <p class="h1" id="cambio">hola mundo</p>
+</body>
+<!-- <script>
+    const resize=()=>{
+    if(innerWidth>768){
+            document.body.style.background='red'
+            
+        }else{
+            document.body.style.background='black'
+        } 
+    }
+    addEventListener('resize', resize)
+    addEventListener('DOMContentLoaded',resize)
+</script> -->
+<script>
+    // CSSOM
+    let ms=document.getElementById('cambio');
+
+
+    const mediaQ = matchMedia('(min-width: 600px)')
+
+    const changeSize=mql=>{
+        if(mql.matches){
+            ms.classList.add("h1")
+            document.body.style.background='red'
+            ms.innerHTML = "cambio a tablet o pc"
+        }else{
+            ms.classList.remove("h1")  
+            document.body.style.background='blue'
+            ms.innerHTML = "cambio a celular"
+        }
+        // mql.matches
+        // ? document.body.style.background='red'
+        // : document.body.style.background='blue'
+        
+    }
+    
+    mediaQ.addListener(changeSize)
+
+    changeSize(mediaQ)
+</script>
+</html>
